@@ -19,8 +19,6 @@
             "Effect": "Allow",
             "Action": [
                 "ec2:CreateImage",
-                "ec2:RegisterImage",
-                "ec2:ModifyImageAttribute",
                 "ec2:CreateTags"
             ],
             "Resource": [
