@@ -18,8 +18,7 @@ def lambda_handler(event, context):
     # Only backup up those that have Backup: True/true
     reservations = ec.describe_instances(
         Filters = [
-        {'Name': 'tag-key', 'Values': ['Backup']},
-        {'Name': 'tag-value', 'Values': ['True', 'true']},
+        {'Name': 'tag:Backup', 'Values': ['True','true']}
     ]
     ).get(
         'Reservations', []
