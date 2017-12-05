@@ -21,8 +21,7 @@ def lambda_handler(event, context):
     
     # a filter for amis that have today's DeleteOn date tag
     filters = [
-        {'Name': 'tag-key', 'Values': ['DeleteOn']},
-        {'Name': 'tag-value', 'Values': [delete_on]},
+        {'Name': 'tag:DeleteOn', 'Values': [delete_on]}
     ]
     
     # get amis from our account that match the filter
